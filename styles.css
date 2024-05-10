@@ -1,0 +1,80 @@
+/* Basic CSS reset and full height for body and html */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 1000px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Center content in the first div */
+.centered-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 50% of the viewport height */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Constrain the width of the content within the centered-content div to enhance readability */
+.text {
+    max-width: 800px;
+    /* max-width to control the width of the text */
+    box-sizing: border-box;
+    font-size: 20px;
+    margin: 0 100px 20px;
+}
+
+/* Grid layout for the second div */
+.grid-layout {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+    /* 2 columns */
+    grid-gap: 20px;
+    /* gap between cells */
+    padding: 20px 150px;
+    /* Increased side margins */
+}
+
+/* Style for each cell in the grid */
+.grid-cell {
+    border: 1px solid lightblue;
+    /* light grey border */
+    border-radius: 20px;
+    /* rounded corners */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 30px 0 px;
+    height: 150px;
+}
+
+/* Style for icons before titles */
+.icon {
+    margin-right: 5px;
+    margin-left: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+h2 {
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    /* Aligns the icon with the text */
+    margin-bottom: 3px;
+    /* Maintain space between title and text */
+}
+h1{
+    font-size: 50px;
+    padding-top: 40px;
+}
+p{
+    margin-top: 5px;
+    margin-left: 15px;
+    font-size: 20px;
+}
