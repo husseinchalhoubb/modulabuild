@@ -1,37 +1,52 @@
+/* Define the animation */
+@keyframes file2-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Basic CSS reset and full height for body and html */
-body,
-html {
+.file2-body,
+.file2-html {
     margin: 0;
     padding: 0;
-    height: 1000px;
+    height: 100%;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
 /* Center content in the first div */
-.centered-content {
+.file2-centered-content {
     display: flex;
     align-items: center;
     justify-content: center;
     /* 50% of the viewport height */
     text-align: center;
     margin-bottom: 10px;
+    animation: file2-fadeIn 1s ease forwards;
 }
 
 /* Constrain the width of the content within the centered-content div to enhance readability */
-.text {
+.file2-text {
     max-width: 800px;
     /* max-width to control the width of the text */
     box-sizing: border-box;
     font-size: 20px;
-    margin: 0 100px 20px;
+    margin: 0 auto 20px;
+    animation: file2-fadeIn 3s ease forwards;
 }
 
 /* Grid layout for the second div */
-.grid-layout {
+.file2-grid-layout {
     display: grid;
     width: 80%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     /* 2 columns */
     grid-gap: 20px;
     /* gap between cells */
@@ -40,7 +55,7 @@ html {
 }
 
 /* Style for each cell in the grid */
-.grid-cell {
+.file2-grid-cell {
     border: 1px solid lightblue;
     /* light grey border */
     border-radius: 20px;
@@ -49,32 +64,134 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 30px 0 px;
     height: 150px;
+    animation: file2-fadeIn 3s ease forwards;
 }
 
 /* Style for icons before titles */
-.icon {
+.file2-icon {
     margin-right: 5px;
     margin-left: 10px;
     vertical-align: middle;
     display: inline-block;
+    animation: file2-fadeIn 3s ease forwards;
 }
 
-h2 {
+.file2-grid-cell h2 {
     display: flex;
     font-size: 30px;
     align-items: center;
     /* Aligns the icon with the text */
     margin-bottom: 3px;
     /* Maintain space between title and text */
+    animation: file2-fadeIn 3s ease forwards;
 }
-h1{
+
+.file2-centered-content h1 {
     font-size: 50px;
     padding-top: 40px;
+    animation: file2-fadeIn 3s ease forwards;
 }
-p{
+
+.file2-grid-cell p {
     margin-top: 5px;
     margin-left: 15px;
     font-size: 20px;
+    animation: file2-fadeIn 3s ease forwards;
+}
+
+/* Media query for screens between 768px and 1200px */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .file2-grid-layout {
+        width: 90%;
+        padding: 20px 100px;
+    }
+}
+
+/* Media query for screens up to 768px */
+@media screen and (max-width: 768px) {
+    .file2-text {
+        margin: 0 10px 20px;
+    }
+
+    .file2-grid-layout {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        margin: 0 auto;
+        /* Center the grid */
+    }
+
+    .file2-centered-content h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        /* Added margin */
+    }
+
+    .file2-grid-cell p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        /* Added margin */
+    }
+
+    .file2-grid-cell h2 {
+        font-size: 25px;
+    }
+}
+
+/* Media query for screens up to 480px */
+@media screen and (max-width: 480px) {
+    .file2-text {
+        margin: 0 5px 20px;
+    }
+
+    .file2-grid-layout {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        margin: 0 auto;
+        /* Center the grid */
+    }
+
+    .file2-centered-content h1 {
+        font-size: 40px;
+    }
+
+    .file2-grid-cell h2 {
+        font-size: 25px;
+    }
+
+    .file2-grid-cell p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    .file2-grid-layout {
+        width: 90%;
+        padding: 20px 100px;
+    }
+}
+
+/* Media query for screens up to 2560px */
+@media screen and (min-width: 1920px) {
+    .file2-grid-layout {
+        width: 80%;
+        padding: 20px 200px;
+    }
+
+    .file2-centered-content h1 {
+        font-size: 60px;
+    }
+
+    .file2-grid-cell h2 {
+        font-size: 35px;
+    }
+
+    .file2-text {
+        max-width: 900px;
+        font-size: 25px;
+    }
+
+    .file2-grid-cell p {
+        font-size: 30px;
+    }
 }

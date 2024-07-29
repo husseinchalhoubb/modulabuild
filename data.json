@@ -1,0 +1,38 @@
+{
+  "centeredContent": {
+    "title": "Build for today with tomorrow in mind",
+    "text": "By preserving the environment, conserving resources, and making responsible choices, we can make a positive impact today and tomorrow. That's why we're committed to mapping and mastering ESG for every project."
+  },
+  "gridLayout": [
+    {
+      "title": "Sustainable sourcing",
+      "text": "We source sustainable materials at every opportunity.",
+      "icon": "save-forest-10.svg"
+    },
+    {
+      "title": "Lean production",
+      "text": "We use only the resources necessary to complete a project.",
+      "icon": "factory0.svg"
+    },
+    {
+      "title": "Green innovations",
+      "text": "We innovate greener, safer, and more efficient construction methods.",
+      "icon": "eco-light-1-10.svg"
+    },
+    {
+      "title": "Optimized logistics",
+      "text": "We optimize logistics to deliver eco-friendly and cost-effective solutions",
+      "icon": "delivery-10.svg"
+    },
+    {
+      "title": "EPD certification",
+      "text": "We build using EPD certified materials designed to optimized energy efficiency.",
+      "icon": "save-forest-20.svg"
+    },
+    {
+      "title": "Ongoing education",
+      "text": "We partner with leading universities to educate on next generation building techniques.",
+      "icon": "group-5740.svg"
+    }
+  ]
+}
